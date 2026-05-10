@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bianca 💖</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ====================================== */
+/* RESET */
+/* ====================================== */
+
+:root{
+
+  --bg:#050505;
+  --pink:#ff1493;
+  --pink2:#ff69b4;
+  --soft:#ffd6ea;
+  --white:#ffffff;
+
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  background:var(--bg);
+  color:white;
+  overflow-x:hidden;
+  font-family:'Poppins',sans-serif;
+
+}
+
+/* ====================================== */
+/* BACKGROUND */
+/* ====================================== */
+
+#particles{
+
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:-20;
+
+}
+
+.big-name{
+
+  position:fixed;
+  inset:0;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:15vw;
+
+  font-family:
+  'Cormorant Garamond',serif;
+
+  color:
+  rgba(255,20,147,.05);
+
+  pointer-events:none;
+
+  z-index:-19;
+
+  animation:
+  pulse 5s infinite alternate;
+
+}
+
+@keyframes pulse{
+
+  from{
+
+    transform:scale(1);
+    opacity:.3;
+
+  }
+
+  to{
+
+    transform:scale(1.05);
+    opacity:.6;
+
+  }
+
+}
+
+/* ====================================== */
+/* FLOATING HEARTS */
+/* ====================================== */
+
+.hearts{
+
+  position:fixed;
+  inset:0;
+
+  overflow:hidden;
+
+  pointer-events:none;
+
+  z-index:-18;
+
+}
+
+.heart{
+
+  position:absolute;
+
+  width:18px;
+  height:18px;
+
+  background:var(--pink);
+
+  transform:rotate(45deg);
+
+  animation:float linear forwards;
+
+  filter:
+  drop-shadow(0 0 10px var(--pink));
+
+}
+
+.heart::before,
+.heart::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:18px;
+  height:18px;
+
+  background:var(--pink);
+
+  border-radius:50%;
+
+}
+
+.heart::before{
+
+  top:-9px;
+  left:0;
+
+}
+
+.heart::after{
+
+  top:0;
+  left:-9px;
+
+}
+
+@keyframes float{
+
+  from{
+
+    transform:
+    translateY(100vh)
+    rotate(45deg);
+
+    opacity:1;
+
+  }
+
+  to{
+
+    transform:
+    translateY(-120vh)
+    rotate(405deg);
+
+    opacity:0;
+
+  }
+
+}
+
+/* ====================================== */
+/* NAVBAR */
+/* ====================================== */
+
+.navbar{
+
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:100;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:22px;
+
+  backdrop-filter:blur(15px);
+
+  background:
+  rgba(0,0,0,.2);
+
+  border-bottom:
+  1px solid rgba(255,255,255,.08);
+
+}
+
+.logo{
+
+  font-size:2.3rem;
+
+  color:var(--pink);
+
+  font-family:
+  'Cormorant Garamond',serif;
+
+  text-shadow:
+  0 0 20px var(--pink),
+  0 0 60px var(--pink);
+
+}
+
+/* ====================================== */
+/* HERO */
+/* ====================================== */
+
+.hero{
+
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  padding:120px 20px;
+
+}
+
+.hero-content{
+  max-width:1000px;
+}
+
+.hero h1{
+
+  font-size:
+  clamp(4rem,10vw,8rem);
+
+  font-family:
+  'Cormorant Garamond',serif;
+
+  text-shadow:
+  0 0 20px var(--pink),
+  0 0 50px var(--pink),
+  0 0 120px var(--pink);
+
+  animation:
+  glow 3s infinite alternate;
+
+}
+
+@keyframes glow{
+
+  from{
+
+    text-shadow:
+    0 0 20px var(--pink),
+    0 0 50px var(--pink);
+
+  }
+
+  to{
+
+    text-shadow:
+    0 0 35px var(--pink),
+    0 0 90px var(--pink),
+    0 0 160px var(--pink);
+
+  }
+
+}
+
+.hero p{
+
+  margin-top:30px;
+
+  line-height:2;
+
+  color:#f5dce7;
+
+  font-size:1.1rem;
+
+}
+
+/* ====================================== */
+/* LOVE TIMER */
+/* ====================================== */
+
+.timer-box{
+
+  margin-top:40px;
+
+}
+
+.timer-title{
+
+  color:#ffd3ea;
+
+  margin-bottom:20px;
+
+}
+
+#loveTimer{
+
+  font-size:3rem;
+
+  font-weight:700;
+
+  color:var(--pink);
+
+  text-shadow:
+  0 0 20px var(--pink),
+  0 0 40px var(--pink);
+
+  line-height:1.8;
+
+}
+
+/* ====================================== */
+/* BUTTON */
+/* ====================================== */
+
+.btn{
+
+  margin-top:35px;
+
+  padding:18px 35px;
+
+  border:none;
+
+  border-radius:20px;
+
+  cursor:pointer;
+
+  color:white;
+
+  font-weight:600;
+
+  background:
+  rgba(255,20,147,.15);
+
+  border:
+  1px solid rgba(255,20,147,.4);
+
+  backdrop-filter:blur(10px);
+
+  transition:.4s;
+
+  box-shadow:
+  0 0 20px rgba(255,20,147,.4);
+
+}
+
+.btn:hover{
+
+  transform:
+  translateY(-5px)
+  scale(1.03);
+
+  box-shadow:
+  0 0 40px rgba(255,20,147,.9);
+
+}
+
+/* ====================================== */
+/* SECTION */
+/* ====================================== */
+
+.section{
+
+  padding:120px 7%;
+
+}
+
+.title{
+
+  text-align:center;
+
+  margin-bottom:70px;
+
+}
+
+.title h2{
+
+  font-size:3.5rem;
+
+  font-family:
+  'Cormorant Garamond',serif;
+
+}
+
+/* ====================================== */
+/* LETTER */
+/* ====================================== */
+
+.letter{
+
+  max-width:1100px;
+
+  margin:auto;
+
+  position:relative;
+
+  border-radius:35px;
+
+  padding:45px;
+
+  background:
+  linear-gradient(
+    145deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02)
+  );
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(16px);
+
+  transition:.5s;
+
+  box-shadow:
+  0 15px 50px rgba(0,0,0,.5);
+
+}
+
+.letter:hover{
+
+  transform:
+  translateY(-10px);
+
+  box-shadow:
+  0 0 40px rgba(255,20,147,.3),
+  0 25px 70px rgba(0,0,0,.6);
+
+}
+
+.seal{
+
+  position:absolute;
+  top:20px;
+  right:20px;
+
+  width:60px;
+  height:60px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    circle at top,
+    #ffd7ea,
+    #ff1493
+  );
+
+  box-shadow:
+  0 0 25px rgba(255,20,147,.8);
+
+}
+
+.letter h3{
+
+  font-size:3rem;
+
+  margin-bottom:30px;
+
+  font-family:
+  'Cormorant Garamond',serif;
+
+}
+
+.letter p{
+
+  line-height:2.3;
+
+  color:#f5dce7;
+
+}
+
+/* ====================================== */
+/* HANDWRITING */
+/* ====================================== */
+
+.handwriting-box{
+
+  margin-top:40px;
+
+  min-height:320px;
+
+  border-radius:25px;
+
+  padding:35px;
+
+  background:
+  rgba(255,255,255,.03);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+}
+
+.handwriting{
+
+  font-family:
+  'Dancing Script',cursive;
+
+  font-size:1.8rem;
+
+  line-height:2.2;
+
+  color:#ffd3ea;
+
+  white-space:pre-wrap;
+
+}
+
+/* ====================================== */
+/* GRID */
+/* ====================================== */
+
+.letters-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:30px;
+
+}
+
+.mini-letter{
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:30px;
+
+  padding:35px;
+
+  background:
+  linear-gradient(
+    145deg,
+    rgba(255,255,255,.06),
+    rgba(255,255,255,.02)
+  );
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  transition:.45s;
+
+  box-shadow:
+  0 15px 50px rgba(0,0,0,.5);
+
+}
+
+.mini-letter:hover{
+
+  transform:
+  translateY(-10px);
+
+  border-color:
+  rgba(255,20,147,.4);
+
+  box-shadow:
+  0 0 35px rgba(255,20,147,.35);
+
+}
+
+.mini-letter h3{
+
+  font-size:2rem;
+
+  margin-bottom:20px;
+
+  font-family:
+  'Cormorant Garamond',serif;
+
+}
+
+.mini-letter p{
+
+  line-height:2;
+
+  color:#f5dce7;
+
+}
+
+.mini-letter span{
+
+  display:block;
+
+  margin-top:20px;
+
+  color:#ffd3ea;
+
+}
+
+/* ====================================== */
+/* BURN LETTER */
+/* ====================================== */
+
+.burn-letter{
+
+  max-width:550px;
+
+  margin:100px auto;
+
+  padding:35px;
+
+  background:#f3e6c6;
+
+  color:#2b1b12;
+
+  text-align:center;
+
+  position:relative;
+
+  border-radius:15px;
+
+  overflow:hidden;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,.6);
+
+}
+
+.burn-letter::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:-3px;
+
+  background:
+  linear-gradient(
+    45deg,
+    #ff0000,
+    orange,
+    transparent,
+    #ff5500
+  );
+
+  animation:
+  fire 4s linear infinite;
+
+  z-index:-1;
+
+  filter:blur(8px);
+
+}
+
+@keyframes fire{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+
+}
+
+.burn-letter p{
+
+  font-size:1.5rem;
+
+  line-height:2;
+
+  font-family:
+  'Cormorant Garamond',serif;
+
+}
+
+.burn-letter span{
+
+  color:#b30000;
+
+  font-weight:bold;
+
+  text-shadow:
+  0 0 8px rgba(179,0,0,.4);
+
+}
+
+/* ====================================== */
+/* FINAL HEART */
+/* ====================================== */
+
+#finalHeart{
+
+  font-size:55px;
+
+  margin-top:20px;
+
+  display:inline-block;
+
+  cursor:pointer;
+
+  animation:
+  beat 1s infinite;
+
+}
+
+@keyframes beat{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.3);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
+
+/* ====================================== */
+/* FOOTER */
+/* ====================================== */
+
+.footer{
+
+  padding:100px 20px;
+
+  text-align:center;
+
+  color:#f5dce7;
+
+}
+
+.footer h2{
+
+  font-size:3rem;
+
+  margin-bottom:20px;
+
+  font-family:
+  'Cormorant Garamond',serif;
+
+}
+
+/* ====================================== */
+/* REVEAL */
+/* ====================================== */
+
+.reveal{
+
+  opacity:0;
+
+  transform:translateY(40px);
+
+  transition:1s ease;
+
+}
+
+.reveal.active{
+
+  opacity:1;
+
+  transform:none;
+
+}
+
+/* ====================================== */
+/* RESPONSIVE */
+/* ====================================== */
+
+@media(max-width:900px){
+
+  .hero h1{
+    font-size:4.7rem;
+  }
+
+  #loveTimer{
+    font-size:2rem;
+  }
+
+  .title h2{
+    font-size:2.5rem;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<audio id="music" autoplay loop>
+  <source src="Love Story (Piano).mp3" type="audio/mpeg">
+</audio>
+
+<canvas id="particles"></canvas>
+
+<div class="big-name">
+  Bianca
+</div>
+
+<div class="hearts" id="hearts"></div>
+
+<header class="navbar">
+
+  <div class="logo">
+    Para Minha Mãe Bianca 💖
+  </div>
+
+</header>
+
+<section class="hero">
+
+  <div class="hero-content reveal">
+
+    <h1>
+      Feliz Dia das Mães
+    </h1>
+
+    <p>
+      Mãe, esse site inteiro foi feito especialmente para você.
+      Cada detalhe representa o amor gigantesco que eu sinto por você. 💖
+    </p>
+
+    <!-- TIMER -->
+
+    <div class="timer-box">
+
+      <div class="timer-title">
+        Meu amor por você cresce infinitamente:
+      </div>
+
+      <div id="loveTimer">
+
+        0 anos 💖<br>
+        0 dias 💖<br>
+        0 horas 💖<br>
+        0 minutos 💖<br>
+        0 segundos 💖
+
+      </div>
+
+    </div>
+
+    <button class="btn" onclick="scrollToLetter()">
+      Abrir Carta 💌
+    </button>
+    <!-- BOTÃO DA MÚSICA -->
+<!-- COLOQUE ISSO NA HERO SECTION, ABAIXO DO OUTRO BOTÃO -->
+
+<button class="btn" onclick="toggleMusic()" id="musicBtn">
+  Tocar Música 🎵
+</button>
+
+  </div>
+
+</section>
+
+<section class="section" id="mainLetter">
+
+  <div class="title reveal">
+
+    <h2>
+      Uma Carta Especial 💖
+    </h2>
+
+  </div>
+
+  <div class="letter reveal">
+
+    <div class="seal"></div>
+
+    <h3>
+      Minha Querida Mãe Bianca
+    </h3>
+
+    <p>
+
+      Mãe Bianca,
+      eu queria conseguir explicar o tamanho do amor que eu sinto por você,
+      mas sinceramente nenhuma palavra do universo seria suficiente.
+
+      Você sempre esteve comigo em todos os momentos da minha vida.
+      Nos dias felizes,
+      nos dias difíceis,
+      nas minhas conquistas
+      e até quando eu nem acreditava em mim mesmo.
+
+      Seu abraço é meu lugar favorito no mundo.
+      Sua voz traz paz.
+      Seu carinho cura qualquer tristeza.
+
+      Obrigado por nunca desistir de mim.
+      Obrigado por cada conselho,
+      cada abraço,
+      cada cuidado
+      e cada momento que você dedicou pra mim.
+
+      Você é meu maior orgulho.
+      Minha inspiração.
+      Minha força.
+      Meu coração.
+
+      Feliz Dia das Mães, Bianca. 💖
+
+    </p>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="title reveal">
+
+    <h2>
+      Carta Escrita 💌
+    </h2>
+
+  </div>
+
+  <div class="letter reveal">
+
+    <div class="seal"></div>
+
+    <h3>
+      Uma Carta Especialmente Para Você
+    </h3>
+
+    <button class="btn" onclick="startRomanticLetter()">
+      Começar Carta 💖
+    </button>
+
+    <div class="handwriting-box">
+
+      <div class="handwriting" id="romanticLetter"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="title reveal">
+
+    <h2>
+      Pequenas Cartas 💖
+    </h2>
+
+  </div>
+
+  <div class="letters-grid">
+
+    <div class="mini-letter reveal">
+
+      <div class="seal"></div>
+
+      <h3>
+        Seu Sorriso ✨
+      </h3>
+
+      <p>
+        O seu sorriso ilumina meus dias mais escuros.
+      </p>
+
+      <span>
+        Com amor 💕
+      </span>
+
+    </div>
+
+    <div class="mini-letter reveal">
+
+      <div class="seal"></div>
+
+      <h3>
+        Minha Inspiração 🌸
+      </h3>
+
+      <p>
+        Sua força me inspira todos os dias.
+      </p>
+
+      <span>
+        Seu filho ❤️
+      </span>
+
+    </div>
+
+    <div class="mini-letter reveal">
+
+      <div class="seal"></div>
+
+      <h3>
+        Meu Porto Seguro 🌹
+      </h3>
+
+      <p>
+        Você é meu conforto e minha paz.
+      </p>
+
+      <span>
+        Bianca 💖
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="burn-letter reveal">
+
+  <p>
+
+    Você foi <span>minha paz</span>.<br>
+
+    Meu <span>abrigo</span> em silêncio.<br>
+
+    Minha <span>força</span> quando eu caía.<br>
+
+    E sempre será meu <span>amor</span> eterno.<br>
+
+    Eu te amo.
+
+  </p>
+
+  <div id="finalHeart">
+    ❤️
+  </div>
+
+</div>
+
+<footer class="footer reveal">
+
+  <h2>
+    Eu Te Amo Mãe 💖
+  </h2>
+
+  <p>
+    Esse site foi criado especialmente para Bianca.
+  </p>
+<!-- ========================================= -->
+<!-- CARTAS GRANDES EXTRAS -->
+<!-- COLOQUE ISSO ANTES DO </footer> -->
+<!-- ========================================= -->
+
+<section class="section">
+
+  <div class="title reveal">
+    <h2>
+      Mais Cartas Para Bianca 💖
+    </h2>
+  </div>
+
+  <!-- CARTA 1 -->
+
+  <div class="letter reveal" style="margin-bottom:70px;">
+
+    <div class="seal"></div>
+
+    <div class="letter-content">
+
+      <h3>
+        Você Mudou Minha Vida ✨
+      </h3>
+
+      <p>
+
+        Mãe Bianca,
+
+        às vezes eu paro para pensar em tudo que você já fez por mim
+        e simplesmente não consigo acreditar no tamanho do seu coração.
+
+        Você sempre cuidou de mim até nos momentos em que ninguém percebia.
+        Nos dias em que eu estava triste,
+        você conseguia sentir.
+        Nos dias em que eu estava feliz,
+        você sorria junto comigo.
+
+        Seu amor é diferente de qualquer coisa que existe.
+        É um amor que protege,
+        acalma,
+        cura
+        e transforma tudo ao redor.
+
+        Você foi a pessoa que segurou minha mão nos momentos difíceis,
+        que acreditou em mim quando eu nem acreditava em mim mesmo
+        e que nunca deixou eu me sentir sozinho.
+
+        Cada detalhe desse site representa um pedaço do carinho
+        que eu sinto por você.
+        Porque você merece algo especial,
+        único
+        e inesquecível.
+
+        Você é meu orgulho eterno. 💖
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- CARTA 2 -->
+
+  <div class="letter reveal" style="margin-bottom:70px;">
+
+    <div class="seal"></div>
+
+    <div class="letter-content">
+
+      <h3>
+        Meu Lugar Seguro 🌙
+      </h3>
+
+      <p>
+
+        Mãe,
+
+        o mundo pode mudar mil vezes,
+        mas existe uma coisa que sempre continua igual:
+        o conforto que eu sinto perto de você.
+
+        Seu abraço é meu lugar favorito.
+        Sua voz me traz paz.
+        Seu carinho consegue transformar qualquer dia ruim
+        em algo suportável.
+
+        Você é aquela pessoa que ilumina tudo sem perceber.
+        Até nos momentos mais difíceis,
+        você continua forte.
+
+        E sinceramente?
+        Eu admiro isso mais do que qualquer coisa.
+
+        Obrigado por cada conselho,
+        cada cuidado,
+        cada noite preocupada comigo,
+        cada palavra bonita
+        e cada momento que você dedicou pra mim.
+
+        Eu nunca vou esquecer tudo isso.
+
+        Você é a melhor mãe do universo inteiro. 💕
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- CARTA 3 -->
+
+  <div class="letter reveal" style="margin-bottom:70px;">
+
+    <div class="seal"></div>
+
+    <div class="letter-content">
+
+      <h3>
+        Amor Que Nunca Acaba 💌
+      </h3>
+
+      <p>
+
+        Bianca,
+
+        existem pessoas que passam pela nossa vida,
+        mas existem pessoas que se tornam parte da nossa alma.
+
+        Você é essa pessoa pra mim.
+
+        Não importa quanto tempo passe,
+        não importa onde eu esteja,
+        eu sempre vou carregar você dentro do meu coração.
+
+        Porque foi você quem me ensinou o que é amor verdadeiro.
+        Foi você quem me ensinou a continuar mesmo nos dias difíceis.
+        Foi você quem me mostrou o significado de carinho,
+        proteção
+        e família.
+
+        Você merece todas as estrelas do céu.
+        Merece toda felicidade do mundo.
+        Merece viver rodeada de amor,
+        porque é exatamente isso que você entrega para todos ao seu redor.
+
+        Obrigado por existir.
+        Obrigado por ser minha mãe.
+        Obrigado por ser a Bianca. 💖
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- CARTA 4 -->
+
+  <div class="letter reveal" style="margin-bottom:70px;">
+
+    <div class="seal"></div>
+
+    <div class="letter-content">
+
+      <h3>
+        Você É Minha Inspiração 👑
+      </h3>
+
+      <p>
+
+        Mãe Bianca,
+
+        quando eu penso em força,
+        eu penso em você.
+
+        Quando eu penso em coragem,
+        eu lembro de você.
+
+        Porque mesmo cansada,
+        mesmo passando por dificuldades,
+        você continuou sorrindo
+        e cuidando de todos.
+
+        Isso é algo raro.
+        Algo lindo.
+        Algo que eu admiro profundamente.
+
+        Você não faz ideia do quanto inspira as pessoas ao seu redor.
+        Seu coração é gigante.
+        Seu jeito é único.
+        Sua presença faz diferença em qualquer lugar.
+
+        Se um dia eu me tornar alguém forte,
+        é porque eu tive você como exemplo.
+
+        Você é minha rainha,
+        minha inspiração,
+        minha melhor companhia
+        e meu maior orgulho.
+
+        Eu te amo infinitamente. 💕
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ========================================= -->
+<!-- GRANDE FINAL -->
+<!-- COLOQUE ISSO ANTES DO </footer> -->
+<!-- ========================================= -->
+
+<section class="section">
+
+  <div class="title reveal">
+    <h2>
+      Grande Final 💖
+    </h2>
+  </div>
+
+  <div class="letter reveal">
+
+    <div class="seal"></div>
+
+    <div class="letter-content">
+
+      <h3>
+        A Última Carta Para Bianca ✨
+      </h3>
+
+      <p style="margin-bottom:30px;">
+        Clique abaixo e veja a carta final sendo escrita lentamente enquanto a música toca. 💌
+      </p>
+
+      <button class="btn" onclick="startFinalLetter()">
+        Começar Grande Final 💖
+      </button>
+
+      <div id="finalLetter" class="handwriting" style="
+        margin-top:40px;
+        min-height:400px;
+        white-space:pre-line;
+      "></div>
+
+    </div>
+
+  </div>
+
+</section>
+</footer>
+
+<script>
+
+/* ====================================== */
+/* LOVE TIMER */
+/* ====================================== */
+
+const startDate =
+new Date("2025-01-01 00:00:00");
+
+function updateTimer(){
+
+  const now =
+  new Date();
+
+  const diff =
+  now - startDate;
+
+  const seconds =
+  Math.floor(diff / 1000);
+
+  const minutes =
+  Math.floor(seconds / 60);
+
+  const hours =
+  Math.floor(minutes / 60);
+
+  const days =
+  Math.floor(hours / 24);
+
+  const years =
+  Math.floor(days / 365);
+
+  document.getElementById(
+    "loveTimer"
+  ).innerHTML =
+
+  `${years} anos 💖<br>
+   ${days} dias 💖<br>
+   ${hours} horas 💖<br>
+   ${minutes} minutos 💖<br>
+   ${seconds} segundos 💖`;
+
+}
+
+setInterval(updateTimer,1000);
+
+updateTimer();
+
+/* ====================================== */
+/* HEARTS */
+/* ====================================== */
+
+const hearts =
+document.getElementById("hearts");
+
+function createHeart(){
+
+  const heart =
+  document.createElement("div");
+
+  heart.className =
+  "heart";
+
+  heart.style.left =
+  Math.random()*100 + "vw";
+
+  heart.style.animationDuration =
+  6 + Math.random()*8 + "s";
+
+  heart.style.opacity =
+  Math.random();
+
+  heart.style.transform =
+  `scale(${Math.random()+.5}) rotate(45deg)`;
+
+  hearts.appendChild(heart);
+
+  setTimeout(()=>{
+    heart.remove();
+  },15000);
+
+}
+
+setInterval(createHeart,250);
+
+/* ====================================== */
+/* SCROLL */
+/* ====================================== */
+
+function scrollToLetter(){
+
+  document
+  .getElementById("mainLetter")
+  .scrollIntoView({
+    behavior:"smooth"
+  });
+
+}
+
+/* ====================================== */
+/* REVEAL */
+/* ====================================== */
+
+const reveals =
+document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll",()=>{
+
+  reveals.forEach(reveal=>{
+
+    const top =
+    reveal.getBoundingClientRect().top;
+
+    if(top < window.innerHeight - 100){
+
+      reveal.classList.add("active");
+
+    }
+
+  });
+
+});
+
+/* ====================================== */
+/* WRITING LETTER */
+/* ====================================== */
+
+const romanticText = `
+
+Mãe...
+
+Talvez eu nunca consiga explicar tudo o que você significa pra mim.
+
+Você esteve comigo quando ninguém mais entendia.
+Você acreditou em mim até nos momentos em que eu não acreditava em mim mesmo.
+
+Seu abraço sempre foi meu lugar favorito.
+Sua voz sempre trouxe calma pro meu coração.
+
+Obrigado por cada conselho.
+Por cada cuidado.
+Por cada abraço.
+
+Eu te amo infinitamente, mãe. 💖
+
+`;
+
+let writingStarted = false;
+
+function startRomanticLetter(){
+
+  if(writingStarted) return;
+
+  writingStarted = true;
+
+  const box =
+  document.getElementById("romanticLetter");
+
+  let i = 0;
+
+  function write(){
+
+    if(i < romanticText.length){
+
+      box.innerHTML +=
+      romanticText.charAt(i);
+
+      i++;
+
+      setTimeout(write,35);
+
+    }
+
+  }
+
+  write();
+
+}
+
+/* ====================================== */
+/* FINAL HEART */
+/* ====================================== */
+
+const finalHeart =
+document.getElementById("finalHeart");
+
+finalHeart.addEventListener("click",()=>{
+
+  for(let i=0;i<80;i++){
+
+    const heart =
+    document.createElement("div");
+
+    heart.innerHTML = "💖";
+
+    heart.style.position = "fixed";
+
+    heart.style.left =
+    Math.random()*100 + "vw";
+
+    heart.style.top =
+    Math.random()*100 + "vh";
+
+    heart.style.fontSize =
+    (20 + Math.random()*40) + "px";
+
+    heart.style.pointerEvents =
+    "none";
+
+    heart.style.zIndex = "9999";
+
+    heart.style.animation =
+    "float 4s linear forwards";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+      heart.remove();
+    },4000);
+
+  }
+
+});
+
+/* ====================================== */
+/* PARTICLES */
+/* ====================================== */
+
+const canvas =
+document.getElementById("particles");
+
+const ctx =
+canvas.getContext("2d");
+
+canvas.width =
+window.innerWidth;
+
+canvas.height =
+window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<120;i++){
+
+  particles.push({
+
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    r:Math.random()*2,
+    d:Math.random()*1
+
+  });
+
+}
+
+function drawParticles(){
+
+  ctx.clearRect(
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  );
+
+  ctx.fillStyle =
+  "rgba(255,20,147,.5)";
+
+  particles.forEach(p=>{
+
+    ctx.beginPath();
+
+    ctx.arc(
+      p.x,
+      p.y,
+      p.r,
+      0,
+      Math.PI*2
+    );
+
+    ctx.fill();
+
+  });
+
+  moveParticles();
+
+}
+
+function moveParticles(){
+
+  particles.forEach(p=>{
+
+    p.y += p.d;
+
+    if(p.y > canvas.height){
+
+      p.y = 0;
+      p.x = Math.random()*canvas.width;
+
+    }
+
+  });
+
+}
+
+setInterval(drawParticles,33);
+
+window.addEventListener("resize",()=>{
+
+  canvas.width =
+  window.innerWidth;
+
+  canvas.height =
+  window.innerHeight;
+
+});
+/* ========================================= */
+/* GRANDE FINAL */
+/* ========================================= */
+
+const finalText = `
+Mãe Bianca...
+
+Talvez eu nunca consiga encontrar palavras suficientes
+para explicar tudo aquilo que eu sinto por você.
+
+Porque amor de verdade
+não cabe em frases.
+Não cabe em textos.
+Não cabe nem no universo inteiro.
+
+Você foi a primeira pessoa que segurou minha mão.
+A primeira voz que me acalmou.
+O primeiro abraço que me fez sentir protegido.
+
+E até hoje...
+continua sendo meu lugar favorito no mundo.
+
+Quando eu penso em força,
+eu penso em você.
+
+Porque mesmo nos dias difíceis,
+você continuou firme.
+Continuou sorrindo.
+Continuou cuidando de todos.
+
+Mesmo cansada...
+mesmo preocupada...
+mesmo enfrentando problemas
+que ninguém via.
+
+Você sempre colocou amor em tudo.
+
+E sinceramente?
+Isso é uma das coisas mais lindas
+que eu já vi em alguém.
+
+Você é a pessoa
+que transforma silêncio em paz.
+Tristeza em conforto.
+Medo em segurança.
+
+Seu abraço tem algo diferente.
+Algo impossível de explicar.
+
+É como se o mundo inteiro ficasse calmo por alguns segundos.
+
+Mãe...
+obrigado por cada conselho.
+
+Obrigado por cada vez
+que você acreditou em mim
+quando eu mesmo não acreditava.
+
+Obrigado por nunca desistir de mim.
+
+Obrigado por me ensinar
+o que é carinho.
+O que é cuidado.
+O que é amor verdadeiro.
+
+Você não faz ideia
+do quanto mudou minha vida.
+
+E talvez você nunca perceba
+o tamanho da importância que tem.
+
+Mas eu percebo.
+
+Todos os dias.
+
+Você é meu orgulho.
+Minha inspiração.
+Minha maior fortaleza.
+
+E não importa quantos anos passem...
+isso nunca vai mudar.
+
+Porque certas pessoas
+se tornam eternas dentro da gente.
+
+E você vai ser eterna dentro do meu coração.
+
+Eu queria poder devolver
+todo amor que você já me deu.
+
+Queria conseguir mostrar
+o quanto você merece felicidade.
+
+Porque você merece o mundo inteiro.
+
+Merece paz.
+Merece amor.
+Merece viver rodeada de coisas lindas.
+
+Você merece sorrir sem preocupação.
+Merece descansar.
+Merece sentir o mesmo carinho
+que sempre entregou pra todos.
+
+E eu prometo...
+que nunca vou esquecer tudo que você fez por mim.
+
+Nunca.
+
+Esse site,
+essas cartas,
+essas animações,
+cada detalhe...
+
+Tudo isso foi feito pensando em você.
+
+Porque você merece algo especial.
+Algo único.
+Algo inesquecível.
+
+Você é a melhor mãe do universo inteiro.
+
+E independente do que aconteça...
+eu sempre vou amar você infinitamente.
+
+Feliz Dia das Mães, Bianca. 💖
+`;
+
+let finalStarted = false;
+
+function startFinalLetter(){
+
+  if(finalStarted) return;
+
+  finalStarted = true;
+
+  const box =
+  document.getElementById("finalLetter");
+
+  let i = 0;
+
+  const speed = 25;
+
+  function type(){
+
+    if(i < finalText.length){
+
+      box.innerHTML += finalText.charAt(i);
+
+      i++;
+
+      box.scrollTop = box.scrollHeight;
+
+      setTimeout(type, speed);
+
+    } else {
+
+      createFinalExplosion();
+
+    }
+
+  }
+
+  type();
+
+}
+
+/* ========================================= */
+/* EXPLOSÃO FINAL */
+/* ========================================= */
+
+function createFinalExplosion(){
+
+  for(let i=0;i<120;i++){
+
+    const heart =
+    document.createElement("div");
+
+    heart.innerHTML = "💖";
+
+    heart.style.position = "fixed";
+
+    heart.style.left =
+    Math.random()*100 + "vw";
+
+    heart.style.top =
+    Math.random()*100 + "vh";
+
+    heart.style.fontSize =
+    (20 + Math.random()*40) + "px";
+
+    heart.style.zIndex = "9999";
+
+    heart.style.pointerEvents = "none";
+
+    heart.style.transition =
+    "all 3s ease";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+
+      heart.style.transform =
+      `translateY(-200px) scale(2) rotate(${Math.random()*360}deg)`;
+
+      heart.style.opacity = "0";
+
+    },50);
+
+    setTimeout(()=>{
+      heart.remove();
+    },3000);
+
+  }
+
+}
+/* ========================================= */
+/* MÚSICA */
+/* ========================================= */
+
+const music =
+document.getElementById("music");
+
+music.loop = true;
+
+function toggleMusic(){
+
+  const btn =
+  document.getElementById("musicBtn");
+
+  if(music.paused){
+
+    music.play();
+
+    btn.innerHTML =
+    "Pausar Música ⏸️";
+
+  } else {
+
+    music.pause();
+
+    btn.innerHTML =
+    "Tocar Música 🎵";
+
+  }
+
+}
+</script>
+
+</body>
+</html>
